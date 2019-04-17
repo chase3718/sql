@@ -21,3 +21,6 @@ delete from customer where id = 14;
 -- select using 'in' clause
 select * from customer where id in(10,11,12);
 
+select ID, CompanyName, City, StateName, Sales, Active from customer c inner join state s where c.StateCode = s.Code;
+
+-- SELECT account_holder, txn_type, amount FROM accounts INNER JOIN transactions ON accounts.id = transactions.account_id;

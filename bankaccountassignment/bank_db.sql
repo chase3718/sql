@@ -1,6 +1,6 @@
 DROP DATABASE IF EXISTS bank_db;
 CREATE DATABASE bank_db;
-use bank_db;
+USE bank_db;
 
 CREATE TABLE accounts (
 	ID INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
@@ -13,7 +13,8 @@ CREATE TABLE transactions (
 	ID INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     amount DECIMAL(20,2) NOT NULL,
     txn_type NVARCHAR(10) NOT NULL,
-    account_id INT NOT NULL
+    account_id INT NOT NULL,
+    FOREIGN KEY (account_id) REFERENCES accounts(`ID`)
 );
 
 INSERT accounts (account_holder, balance, fees) VALUES 
