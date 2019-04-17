@@ -24,6 +24,6 @@ INSERT accounts (account_holder, balance, fees) VALUES
 
 INSERT transactions (amount, txn_type, account_id) VALUES
 (500.00, 'Deposit', 3),
-(200.00, 'Withdrawl', 4),
+(-200.00, 'Withdrawl', 4),
 (200.00, 'Deposit', 4),
 (248.00, 'Deposit', 1);

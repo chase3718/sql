@@ -10,6 +10,10 @@ CREATE TABLE Customer (
     Sales DECIMAL(20, 2) NOT NULL,
     Active BIT NOT NULL
 );
+CREATE TABLE State (
+	Code NVARCHAR(2) NOT NULL PRIMARY KEY,
+    Name NVARCHAR(50) NOT NULL
+);
 
 Insert Customer (Name, City, State, Sales, Active) Values ('Acme, inc.','Jersey City','NJ',143818.91,1);
 Insert Customer (Name, City, State, Sales, Active) Values ('Widget Corp','Seattle','WA',978658.29,1);
@@ -24,3 +28,12 @@ Insert Customer (Name, City, State, Sales, Active) Values ('Demo, Inc.','Las Veg
 Insert into Customer (Name, City, State, Sales, Active) Values 
 ('Inconspicuous Company','Cincinnati','OH',999999999999999999.99,0),
 ('Unassuming Inc','Lexington','KY',3.50,1);
+
+INSERT State (Code, Name) Values ('AL', 'Alabama');
+INSERT State (Code, Name) Values ('CA', 'California');
+INSERT State (Code, Name) Values ('HI', 'Hawaii');
+INSERT State (Code, Name) Values ('NJ', 'New Jersey');
+INSERT State (Code, Name) Values ('NV', 'Nevada');
+INSERT State (Code, Name) Values ('OH', 'Ohio');
+INSERT State (Code, Name) Values ('TX', 'Texas');
+INSERT State (Code, Name) Values ('WA', 'Washington');
