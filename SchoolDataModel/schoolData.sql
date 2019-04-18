@@ -4,30 +4,30 @@ use schoolData;
 
 create table student (
 	ID int primary key auto_increment,
-    fName nvarchar(25) not null,
-    lname nvarchar(25) not null,
-    street nvarchar(25) not null,
-    city nvarchar(25) not null,
-    state nvarchar(25) not null,
-    zip nvarchar(5) not null,
+    fName varchar(25) not null,
+    lname varchar(25) not null,
+    street varchar(25) not null,
+    city varchar(25) not null,
+    state varchar(25) not null,
+    zip varchar(5) not null,
     dob date,
-    phone nvarchar(25) not null,
-    email nvarchar(25) not null
+    phone varchar(25) not null,
+    email varchar(25) not null
 );
 
 create table course (
 	ID int primary key auto_increment,
-    number nvarchar(25) unique not null,
-    subject nvarchar(25) not null,
-    name nvarchar(25) not null
+    number varchar(25) unique not null,
+    subject varchar(25) not null,
+    name varchar(25) not null
 );
 
 create table instructor (
 	ID int primary key auto_increment,
     courseNumber int not null,
     foreign key (courseNumber) references course (ID),
-    fname nvarchar(25) not null,
-    lname nvarchar(25) not null
+    fname varchar(25) not null,
+    lname varchar(25) not null
 );
 
 create table enrollment (
@@ -63,5 +63,5 @@ insert instructor (courseNumber, fname, lname) values
  (978654, 717, 100.00),
  (780435, 465, 76.11);
  
- CREATE USER sdb_user@localhost IDENTIFIED BY 'sesame';
+CREATE USER sdb_user@localhost IDENTIFIED BY 'sesame';
 GRANT SELECT, INSERT, DELETE, UPDATE ON sdb.* TO sdb_user@localhost;
