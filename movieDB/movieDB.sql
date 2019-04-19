@@ -43,6 +43,7 @@ create table movieGenre (
 );
 
 insert genre (name) values
+	('Action'),
 	('Adventure'),
 	('Comedy'),
 	('Crime'),
@@ -52,6 +53,7 @@ insert genre (name) values
 	('Historical fiction'),
 	('Horror'),
 	('Magical realism'),
+    ('Musical'),
 	('Mystery'),
 	('Paranoid Fiction'),
 	('Philosophical'),
