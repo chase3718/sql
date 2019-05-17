@@ -4,8 +4,7 @@ INSERT INTO user (ID, UserName, Password, FirstName, LastName, PhoneNumber, Emai
 (2,'sblessing','login','Sean','Blessing','513-600-7096','sean@blessingtechnology.com',1,1);
 
 -- insert vendors
-INSERT INTO `vendor` (ID, Code, Name, Address, City, State, Zip, PhoneNumber, Email, isPreApproved) 
-VALUES 
+INSERT INTO `vendor` (ID, Code, Name, Address, City, State, Zip, PhoneNumber, Email, isPreApproved) VALUES 
 (1,'BB-1001','Best Buy','100 Best Buy Street','Louisville','KY','40207','502-111-9099','geeksquad@bestbuy.com',1),
 (2,'AP-1001','Apple Inc','1 Infinite Loop','Cupertino','CA','95014','800-123-4567','genius@apple.com',1),
 (3,'AM-1001','Amazon','410 Terry Ave. North','Seattle','WA','98109','206-266-1000','amazon@amazon.com',0),

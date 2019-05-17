@@ -84,3 +84,6 @@ create table purchaseRequestLineItem (
     foreign key (productID) references product(ID),
     constraint purchaserequestlineitem unique (purchaseRequestID, productID)
 );
+
+CREATE USER prs_user@localhost IDENTIFIED BY 'windows';
+GRANT SELECT, INSERT, DELETE, UPDATE ON prs.* TO prs_user@localhost;
